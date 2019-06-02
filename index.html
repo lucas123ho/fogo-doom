@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fogo do DOOM</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        table{
+            border-collapse: collapse;
+            /* border: 1px solid #333; */
+            /* width: 100vw; */
+            /* height: 100vh; */
+        }
+        td{
+            width: 1px;
+            height: 1px;
+            /* border: 1px solid #333; */
+            text-align: center;
+            vertical-align: center;
+            font-family: monospace;
+            font-size: 18px;
+            position: relative;
+        }
+
+        .pixel-index{
+            font-size: 10px;
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            color: #999;
+        }
+
+        td.pixel{
+            width: 4px;
+            height: 4px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="fireCanvas"></div>
+    <div id="controls" style="padding:10px;">
+        <button onclick="setSide(1)">&lsaquo;</button>
+        <button onclick="increaseIntensity()">Aumentar</button>
+        <button onclick="setSide(0)">O</button>
+        <button onclick="decreaseIntensity()">Diminuir</button>
+        <button onclick="setSide(2)">&rsaquo;</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
